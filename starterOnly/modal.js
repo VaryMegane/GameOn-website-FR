@@ -84,7 +84,7 @@ function nomTestValidation(champNom) {
 }
 
 function mailTestValidation(champMail) {
-  let regexmail = /^[\w-\.\+]+@([\w-]+\.)+[\w-]{2,4}$/; 
+  let regexmail = /^[\w-\.\+]+@([\w-]+\.)+[\w-]{2,4}$/;
   // explications avant le @ toutes les caracteres alphanumeriques + (. + - ), apres le point entre 2 a 4 caracteres
 
   // gestion des messages erreurs 
