@@ -34,10 +34,12 @@ function prenomTestValidation(champPrenom) {
   // gestion des messages erreurs
   let messagePrenomErreur = document.getElementsByClassName("erreur")[0];
   let champsVide = 'Vous devez remplir le champ prénom';
+  let espaceVide = 'Le champ est vide ou contient que des espaces'
   let champsInssufisant = 'Veuillez entrer 2 caractères ou plus pour le champ du prénom.';
   let caractereInterdits = 'Ce champ doit contenir uniquement des lettres'
 
-  if (!champPrenom.value) {
+
+  if (!champPrenom.value.trim()){
     messagePrenomErreur.innerHTML = champsVide;
     return false;
   }
@@ -65,7 +67,7 @@ function nomTestValidation(champNom) {
   let champsInssufisant = 'Veuillez entrer 2 caractères ou plus pour le champ du nom';
   let caractereInterdits = 'Ce champ doit contenir uniquement des lettres'
 
-  if (!champNom.value) {
+  if (!champNom.value.trim()) {
     messageNomErreur.innerHTML = champsVide;
     return false;
   }
@@ -92,7 +94,7 @@ function mailTestValidation(champMail) {
   let mailInvalide = 'Mail invalide';
   let champsVide = 'Vous devez remplir le champ mail';
 
-  if (!champMail.value) {
+  if (!champMail.value.trim()) {
     messageMailErreur.innerHTML = champsVide;
     return false;
   }
@@ -111,7 +113,7 @@ function dateTestValidation(champBirthdate) {
   let messageBirthdateErreur = document.getElementsByClassName("erreur")[3];
   let birthdateErreur = 'Vous devez entrer votre date de naissance';
 
-  if (!champBirthdate.value) {
+  if (!champBirthdate.value.trim()) {
     messageBirthdateErreur.innerHTML = birthdateErreur
     return false;
   }
@@ -129,7 +131,7 @@ function nombreConcourTestValidation(champConcour) {
   let messageConcourErreur = document.getElementsByClassName("erreur")[4];
   let champsVide = 'Vous devez indiquer le nombre de tournois';
 
-  if (!champConcour.value) {
+  if (!champConcour.value.trim()) {
     messageConcourErreur.innerHTML = champsVide;
     return false;
   }
